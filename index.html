@@ -1,0 +1,105 @@
+
+<html lang="en">
+  <head>
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {
+	  box-sizing: border-box;
+      }
+
+      body {
+	  font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Style the header */
+      header {
+	  background-color: #5F9EA0;
+	  padding: 30px;
+	  text-align: center;
+	  font-size: 35px;
+	  color: white;
+      }
+      
+      
+      /* Create two columns/boxes that floats next to each other */
+      nav {
+          float: left;
+          width: 30%;
+          height: 1000px; /* only for demonstration, should be removed */
+          background: #FAEBD7;
+          padding: 20px;
+      }
+
+      /* Style the list inside the menu */
+      nav ul {
+          list-style-type: none;
+          padding: 0;
+      }
+
+      article {
+	  float: left;
+          padding: 20px;
+          width: 70%;
+          background-color: #F0F8FF;
+          height: 1000px; /* only for demonstration, should be removed */
+      }
+
+      /* Clear floats after the columns */
+      section::after {
+          content: "";
+          display: table;
+          clear: both;
+      }
+
+      /* Style the footer */
+      footer {
+          background-color: #5F9EA0;
+          padding: 10px;
+          text-align: center;
+          color: white;
+      }
+
+      /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+      @media (max-width: 600px) {
+          nav, article {
+              width: 100%;
+              height: auto;
+          }
+      }
+    </style>
+  </head>
+
+
+    <header>
+<h2 style="font-size:60px;">Welcome to my Digital Portfolio!</h2>
+
+      
+    </header>
+
+    <section>
+      <nav>
+	<ul>
+	  <a href="index.html">About Me</a>
+	  <a href="directory.html">Directory of Classes</a>
+	  <a href="learning.html">Acquired Learning</a>
+	  <a href="isp.html">Independent Study Project</a>
+	  <a href="fingerprints.html">Fingerprints</a>
+	  </ul>
+      </nav>
+
+      <article>
+<h1 style="font-size:50px;">About Me</h1>
+
+	<p style="font-family:'Trebuchet MS'">Hi! My name is Ishita Chowdhury and I am currently a senior at Allen High School, residing in Allen, Texas. I am taking multiples advanced placement courses this year, such as AP Physics C, AP Statistics, and AP Government and Macroeconomics, as well as advanced Computer Science III. I have a passion to turn my multiple skills and knowledges into action by participating in clubs and volunteering in various events. I am a part of the STEAM Ambassadors Leadership Program, where I aid in planning community events at the Allen ISD Steam Center to help promote the wonderful field of the maths, science, and arts to the youth. </p>
+	<p style="font-family:'Trebuchet MS'">I also enjoy reading and drawing in my free time, and never miss an opportunity to expand my learning in various subjects! I enjoy learning different code languages and have created many computer science projects in the past three years. I have created this digital portfolio to showcase my talents and ambitions in computer science! I am passionate about my learning of computer science skills over my three years of experince and hope it can show the growth I have gone through over time.  </p>
+      </article>
+    </section>
+<img src="https://store.hp.com/app/assets/images/uploads/prod/typing-keyboarding-practice-games-and-lessons1604681748818430.jpg" alt="Italian Trulli" style="width:128px;height:128px;">
+    <footer>
+      <p>  You can find me at:   </p>
+    </footer>
+
+  </body>
+  </html>
