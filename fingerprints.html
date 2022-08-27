@@ -7,12 +7,13 @@
      }
 
   p {
-
-      margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 150px;
-    margin-left: 150px;
-}
+      text-indent: 50px;
+      line-height: 2;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 300px;
+    margin-left: 300px;
+  }
 
 
 </style>
@@ -21,9 +22,49 @@
 
 <h1>Fingerprints</h1>
 
-<p><b> Fingerprints: The Importance of a Secure Web Browser </b>
-<br>
+<p><b> Fingerprints: A Key Component to SSL Interception Detection </b></p>
+
+
+<p> As the use of technology grew over the years, the need to use the internet to perform everyday tasks has grown as well. Banking, online shopping, stock exchanging and more are now all digitized and ready to be accessed by traversing through a webpage. To ensure users that websites are safe when putting in confidential information, websites converted to using a Hypertext transfer protocol secure (HTTPS) connection (Gibson Research Corporation, 2016). HTTPS is the secure version of HTTP, which is the protocol used to ensure that data sent between a web browser and a website is secure and cannot be intercepted by a third party(Gibson Research Corporation, 2016). Many websites switched over to this method to prevent their user’s security and privacy being breached. The way it works is that HTTPS requires a trusted third party to sign server-side digital certificates (Wikipedia, 2022) and in turn establish that the connection is secure. This trusted third party is known as Certificate Authorities and they sign the site’s security certificate, asserting the identity of the site (Gibson Research Corporation, 2016). However, many corporations, schools, and even the FBI deemed that it was now difficult to monitor their user’s internet usage to collect data, filter content, and track threatening activity (Gibson Research Corporation, 2016). As a result, they introduced new technology known as “HTTPS Proxy Appliances” that essentially acts as a bridge between the user and the internet (Brian Jefferson, 2020). The browser will first connect to the proxy, and then it will forward the traffic to the website that is being accessed (Brian Jefferson, 2020). However, a drawback is that the web browser is susceptible to being decrypted, inspected, logged, and have its data gathered by the proxy (Gibson Research Corporation, 2016). The HTTPS Proxy Appliance achieves this by creating a fake web server security certificate to impersonate the remote web site, and it signs that certificate itself using the signature of a fake Certificate Authority (Gibson Research Corporation, 2016). This in turn takes away the user’s privacy and security (Gibson Research Corporation, 2016).
 </p>
- 
-  </body>
+  
+<p>  The HTTPS Proxy Appliance can be compared to a man in the middle (MITM) attack, which is a term to describe for when a culprit positions themselves in between a user and an application, to eavesdrop or to impersonate one of the parties, but making it appear as if there was no interference (Imperva, 2019). The HTTPS/SSL interference cannot be prevented, but can be detected because the SSL proxy cannot duplicate a remote server’s certificate entirely (Gibson Research Corporation, 2016). A certificate contains a public and private key to authenticate and manage secure connections, where every public key matches one private key (AppViewX, 2022). The public key is made known to anyone in the outside world, while the private key is a unique key that is kept secret (Gibson Research Corporation, 2016). Together, they are used to encrypt and decrypt messages. Since the SSL Proxy Appliance does not have the private key of the remote server, as it is only visible to the remote server, the fake certificate the SSL Proxy provides to the user's web browser uses a different public key because it does not have the safeguarded private key to match it (Gibson Research Corporation, 2016). Therefore, the SSL-intercepting Proxy Appliance uses a public key that is different from the remote server. Since the public key is available to be seen by the public, you can easily check the authenticity of the certificate. The fingerprint is a set of characters generated from the certificate that uniquely identifies the public key (GeeksforGeeks, 2021). The fingerprints are usually constructed out of cryptographic hash functions. A hash function is an algorithm that maps an input of any size to an output of a shortened length of bits (GeeksforGeeks, 2021). The resulting hash value is the identifier, in this case a fingerprint. A good hash constitutes the properties of being efficiently computable and should uniformly distribute the keys (GeeksforGeeks, 2021). The purpose of this is for key authentication and to show that the fingerprint for the intercepting SSL security certificate will not match the fingerprint shown by the web browser (Gibson Research Corporation, 2016).  </p>
+
+<p>However, there can be some drawbacks to this way of testing for an SSL interception. For example, testing on big companies with a globally distributed web presence may have on hand many different security certificates across their servers and web sites (Gibson Research Corporation, 2016). This means that the users may obtain a different security certificate. A comparison of certificate fingerprints could lead testers to conclude that their connections were being intercepted, when in reality they simply received a different authentic certificate than the one shown by the web page (Gibson Research Corporation, 2016). This is called a false-positive. A false-negative would be when an SSL interception is uncaught and overlooked. </p>
+
+<p>Now here comes the question of whether or not schools have the right to monitor student’s communications. Some say that it has its benefits, especially with the incorporation of monitoring technologies that have potentially prevented youth suicide attempts as well as addressed school safety concerns (Louis Beckett, 2019). These surveillance technologies also can spot students engaging in cyberbullying or inappropriate activities and host an intervention. Though it carries many preventative measures, it is also invasive of the student’s privacy. It would be delving into the student’s personal matters, that they do not want to be shared and should have the right not to do so.
+  </p>
+
+
+
+
+
+<h2> References </h2>
+
+<p>Guardian News and Media. (2019, October 22). Under Digital Surveillance: How American Schools spy on millions of kids. The Guardian. Retrieved August 26, 2022, from https://www.theguardian.com/world/2019/oct/22/school-student-surveillance-bark-gaggle#:~:text=Federal%20law%20requires%20that%20American,monitor%E2%80%9D%20students'%20online%20activities.
+
+</p>
+
+<p>
+  Jefferson, B. (2020, September 17). What is a proxy server and are they good for security? Lepide Blog: A Guide to IT Security, Compliance and IT Operations. Retrieved August 26, 2022, from https://www.lepide.com/blog/what-is-a-proxy-server-and-are-they-good-for-security/
+</p>
+<p>
+  Steve Gibson, G. I. B. S. O. N. R. E. S. E. A. R. C. H. C. O. R. P. O. R. A. T. I. O. N. (n.d.). GRC :  SSL TLS HTTPS web server certificate fingerprints  . GRC | SSL TLS HTTPS Web Server Certificate Fingerprints  . Retrieved August 26, 2022, from https://www.grc.com/fingerprints.htm#top
+</p>
+
+ <p>
+  What are hash functions and how to choose a good hash function? GeeksforGeeks. (2021, March 18). Retrieved August 26, 2022, from https://www.geeksforgeeks.org/what-are-hash-functions-and-how-to-choose-a-good-hash-function/
+</p>
+
+ <p>
+  What are public and private keys?: Public key: Private key. AppViewX. (n.d.). Retrieved August 26, 2022, from https://www.appviewx.com/education-center/what-are-public-and-private-keys/#:~:text=Public%20keys%20and%20private%20keys,known%20only%20to%20the%20owner.
+ </p>
+ <p> 
+  Wikimedia Foundation. (2022, August 26). Public key certificate. Wikipedia. Retrieved August 26, 2022, from https://en.wikipedia.org/wiki/Public_key_certificate
+  </p> 
+
+
+</body>
   </html>
+
+
