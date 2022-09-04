@@ -10,12 +10,15 @@
       }
 
       body {
+
+	  background-color: #c5d5c5;
+
 	  font-family: Arial, Helvetica, sans-serif;
       }
 
       /* Style the header */
       header {
-	  background-color: #5F9EA0;
+	  background-color: #c5d5c5;
 	  padding: 30px;
 	  text-align: center;
 	  font-size: 35px;
@@ -23,39 +26,42 @@
       }
       
       
-      /* Create two columns/boxes that floats next to each other */
-      nav {
-          float: left;
-          width: 30%;
-          height: 1000px; /* only for demonstration, should be removed */
-          background: #FAEBD7;
-          padding: 20px;
+      /* Container for flexboxes */
+      section {
+	  display: -webkit-flex;
+	  display: flex;
       }
 
+      /* Style the navigation menu */
+      nav {
+	  -webkit-flex: 1;
+	  -ms-flex: 1;
+	  flex: 1;
+	  background: #ccc;
+	  padding: 20px;
+      }
+
+      
       /* Style the list inside the menu */
       nav ul {
           list-style-type: none;
           padding: 0;
       }
 
+      /* Style the content */
       article {
-	  float: left;
-          padding: 20px;
-          width: 70%;
-          background-color: #F0F8FF;
-          height: 1000px; /* only for demonstration, should be removed */
+	  -webkit-flex: 3;
+	  -ms-flex: 3;
+	  flex: 3;
+	  background-color: #f0f0f0;
+	  padding: 10px;
       }
+      
 
-      /* Clear floats after the columns */
-      section::after {
-          content: "";
-          display: table;
-          clear: both;
-      }
-
+     
       /* Style the footer */
       footer {
-          background-color: #5F9EA0;
+          background-color: #c5d5c5;
           padding: 10px;
           text-align: center;
           color: white;
@@ -63,32 +69,53 @@
 
       /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
       @media (max-width: 600px) {
-          nav, article {
-              width: 100%;
-              height: auto;
-          }
+	  section {
+	      -webkit-flex-direction: column;
+	      flex-direction: column;
+	  }
       }
+
+
     </style>
   </head>
 
 
     <header>
 <h2 style="font-size:60px;">Welcome to my Digital Portfolio!</h2>
-
       
     </header>
 
-    <section>
-      <nav>
-	<ul>
-	  <a href="index.html">About Me</a>
-	  <a href="directory.html">Directory of Classes</a>
-	  <a href="learning.html">Acquired Learning</a>
-	  <a href="isp.html">Independent Study Project</a>
-	  <a href="fingerprints.html">Fingerprints</a>
-	  </ul>
-      </nav>
 
+    <style>
+      .button {
+	  border: none;
+	  color: white;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 4px 2px;
+	  cursor: pointer;
+      }
+
+      .button1 {background-color: #9fa9a3;} /* Peach */
+      .button2 {background-color: #9fa9a3;} /* Peach */
+      .button3 {background-color: #9fa9a3;} /* Peach */ 
+      .button4 {background-color: #9fa9a3;} /* Peach */
+      .button5 {background-color: #9fa9a3;} /* Peach */
+      
+    </style>
+</head>
+<body>
+
+  <button class="button button1"><a href="index.html">About Me</a></button>
+  <button class="button button2"><a href="directory.html">Directory of Classes</a></button>
+<button class="button button2"><a href="learning.html">Acquired Learning</a></button>
+<button class="button button2"><a href="isp.html">Independent Study Project</a></button>
+<button class="button button2"><a href="fingerprints.html">Fingerprints</a></button> 
+  
+  
       <article>
 <h1 style="font-size:50px;">About Me</h1>
 
@@ -96,9 +123,8 @@
 	<p style="font-family:'Trebuchet MS'">I also enjoy reading and drawing in my free time, and never miss an opportunity to expand my learning in various subjects! I enjoy learning different code languages and have created many computer science projects in the past three years. I have created this digital portfolio to showcase my talents and ambitions in computer science! I am passionate about my learning of computer science skills over my three years of experince and hope it can show the growth I have gone through over time.  </p>
       </article>
     </section>
-<img src="https://store.hp.com/app/assets/images/uploads/prod/typing-keyboarding-practice-games-and-lessons1604681748818430.jpg" alt="Italian Trulli" style="width:128px;height:128px;">
-    <footer>
-      <p>  My home is located at:   </p>
+  <footer>
+      <p>  My home is located at: <a href= "https://ishita-chowdhury.github.io/index.html"> ishita-chowdhury.github.io/index.html </a>  </p>
     </footer>
 
   </body>
