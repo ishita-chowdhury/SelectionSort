@@ -1,11 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hello, World!</title>
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {
+	  box-sizing: border-box;
+      }
+
+      body {
+
+	  background-color: #c5d5c5;
+
+	  font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Style the header */                                                                                                                                header {
+	  background-color: #c5d5c5;
+	  padding: 20px;
+	  text-align: center;
+	  font-size: 0px;
+	  color: white;
+      }
+
+
+      /* Container for flexboxes */
+      section {
+	  display: -webkit-flex;
+	  display: flex;
+      }
+
+      /* Style the navigation menu */
+      nav {
+	  -webkit-flex: 1;
+	  -ms-flex: 1;
+	  flex: 1;
+	  background: #ccc;
+	  padding: 20px;
+      }
+
+
+      /* Style the list inside the menu */
+      nav ul {
+	  list-style-type: none;
+	  padding: 0;
+      }
+
+      /* Style the content */
+      article {
+	  -webkit-flex: 3;
+	  -ms-flex: 3;
+	  flex: 3;
+	  background-color: #f0f0f0;
+	  padding: 10px;
+      }
+
+
+
+      /* Style the footer */
+      footer {
+	  background-color: #c5d5c5;
+	  padding: 10px;
+	  text-align: center;
+	  color: white;
+      }
+
+      /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+      @media (max-width: 600px) {
+	  section {
+	      -webkit-flex-direction: column;
+	      flex-direction: column;
+	  }
+      }
+
+
+    </style>
   </head>
-  <body>
-    <h1>Hello, World!</h1>
-  </body>
-  </html>
+
+
+  <header>
+    <h2 style="font-size:0px;"></h2>
+
+  </header>
+
+
+  <style>
+    .button {
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+    }
+
+    .button1 {background-color: #9fa9a3;} /* Peach */
+    .button2 {background-color: #9fa9a3;} /* Peach */
+    .button3 {background-color: #9fa9a3;} /* Peach */
+    .button4 {background-color: #9fa9a3;} /* Peach */
+    .button5 {background-color: #9fa9a3;} /* Peach */
+
+  </style>
+</head>
+<body>
+
+  <button class="button button1"><a href="index.html">About Me</a></button>
+  <button class="button button2"><a href="directory.html">Directory of Classes</a></button>
+  <button class="button button2"><a href="learning.html">Acquired Learning</a></button>
+  <button class="button button2"><a href="isp.html">Independent Study Project</a></button>
+  <button class="button button2"><a href="fingerprints.html">Fingerprints</a></button>
+
+
+  <article>
+    <h1 style="font-size:50px;">Directory of Classes</h1>
+<ul>
+    <h2 style="font-size:30px;">Science Classes</h2>
+   
+      <li>Advanced Computer Science I</li>
+      <li>Advanced Computer Science II</li>
+      <li>Advanced Computer Science III</li>
+      <li>AP Biology</li>
+      <li>AP Physics 1</li>
+      <li>AP Physics C</li>
+      <li>AP Psychology</li>
+      <h2 style="font-size:30px;">Math Classes</h2>
+      <li>AP Calculus</li>
+      <li>AP Statistics</li>
+      <li>Advanced Geometry</li>
+      <li>Advanced Algebra</li>
+      <h2 style="font-size:30px;">History Classes</h2>
+      <li>AP World History</li>
+      <li>AP US History</li>
+      <li>AP Government and AP Macroeconomics</li>
+      <h2 style="font-size:30px;">English Classes</h2>
+      <li>AP/GT English III</li>
+      <li>AP/GT English IV</li>
+      
+
+    </ul>  
+
+
+  </article>
+</section>
+<footer>
+  <p>  My home is located at: <a href= "https://ishita-chowdhury.github.io/index.html"> ishita-chowdhury.github.io/index.html </a>  </p>
+</footer>
+
+</body>
+</html>
 
 
